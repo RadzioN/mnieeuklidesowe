@@ -14,19 +14,21 @@ import {
 } from './core';
 
 import { LandingModule } from './landing/landing.module';
+import { ArticleModule } from './article/article.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     SharedModule,
-    LandingModule
+    LandingModule,
+    ArticleModule
   ],
   providers: [],
   bootstrap: [AppComponent]

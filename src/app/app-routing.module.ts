@@ -6,6 +6,10 @@ const routes: Routes = [
     path: '',
     loadChildren: () => import('./landing/landing.module').then(m => m.LandingModule)
   },
+  {
+    path: 'article',
+    loadChildren: () => import('./article/article.module').then(m => m.ArticleModule)
+  },
 ];
 
 @NgModule({
