@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 
 //Import wszystkich składników Angular Material
 import { DemoMaterialModule } from './layout';
+import { CardComponent } from './components';
 
 @NgModule({
     imports: [
@@ -17,6 +18,7 @@ import { DemoMaterialModule } from './layout';
         DemoMaterialModule,
     ],
     declarations: [
+        CardComponent
     ],
     exports: [
         CommonModule,
@@ -25,6 +27,7 @@ import { DemoMaterialModule } from './layout';
         HttpClientModule,
         RouterModule,
         DemoMaterialModule,
+        CardComponent
     ]
 })
 export class SharedModule { }
