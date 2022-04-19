@@ -1,0 +1,9 @@
+<div class="app-header">
+    <button mat-icon-button>
+        <mat-icon class="material-icons-round help-btn">help</mat-icon>
+    </button>
+    <h1 class="name-page"><span class="name-page-highlight">m</span>etryki <span class="name-page-highlight">n</span>ie<span class="name-page-highlight">e</span>uklidesowe</h1>
+    <button mat-icon-button (click)="toggleDarkMode()" class="mode-btn">
+        <mat-icon class="material-icons-round">{{isDarkMode ? 'dark_mode' : 'light_mode'}}</mat-icon>
+    </button>
+</div>
