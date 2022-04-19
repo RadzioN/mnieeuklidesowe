@@ -1,26 +1,22 @@
 @import "@angular/material/theming";
 @include mat-core();
 
-$mat-primary-scheme: (
-  100: #c5cae9,
-  500: #61699a,
-  700: #303f9f,
-  contrast: (
-    100: rgba(0, 0, 0, 0.87),
-    500: #ffffff,
-    700: #ffffff,
-  ),
+$mat-primary-scheme: (100: #c5cae9,
+    500: #61699a,
+    700: #303f9f,
+    contrast: (100: rgba(0, 0, 0, 0.87),
+        500: #ffffff,
+        700: #ffffff,
+    ),
 );
 
-$mat-accent-scheme: (
-  100: #ff80ab,
-  500: #ff4081,
-  700: #f50057,
-  contrast: (
-    100: rgba(0, 0, 0, 0.87),
-    500: rgba(0, 0, 0, 0.87),
-    700: #ffffff,
-  ),
+$mat-accent-scheme: (100: #ff80ab,
+    500: #ff4081,
+    700: #f50057,
+    contrast: (100: rgba(0, 0, 0, 0.87),
+        500: rgba(0, 0, 0, 0.87),
+        700: #ffffff,
+    ),
 );
 
 $mat-primary-palette: mat-palette($mat-primary-scheme);
@@ -29,40 +25,55 @@ $mat-accent-palette: mat-palette($mat-accent-scheme);
 $app-light-theme: mat-light-theme($mat-primary-palette, $mat-accent-palette);
 
 .light-mode {
-  @include angular-material-theme($app-light-theme);
-  --contrast: #fff;
-  --light-image-filter: invert(100%);
-  --lighter: #9C9C9C;
-  --darker: #D8D8D8;
-  background-color: #F1F1F1;
+    @include angular-material-theme($app-light-theme);
+    --contrast: #fff;
+    --light-image-filter: invert(100%);
+    --lighter: #9C9C9C;
+    --darker: #D8D8D8;
+    background-color: #F1F1F1;
 }
 
 $app-dark-theme: mat-dark-theme($mat-primary-palette, $mat-accent-palette);
 
 .dark-mode {
-  @include angular-material-theme($app-dark-theme);
-  --contrast: #000;
-  --dark-image-filter: invert(100%);
-  --lighter: #9C9C9C;
-  --darker: #101010;
-  background-color: rgb(24, 24, 24);
-  color: whitesmoke;
+    @include angular-material-theme($app-dark-theme);
+    --contrast: #000;
+    --dark-image-filter: invert(100%);
+    --lighter: #9C9C9C;
+    --darker: #101010;
+    background-color: rgb(24, 24, 24);
+    color: whitesmoke;
 }
 
 html,
 body {
-  height: 100%;
+    height: 100%;
 }
+
 body {
-  margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
-  transition: .3s;
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    transition: .3s;
 }
 
 .dark-image {
-  filter: var(--dark-image-filter);
+    filter: var(--dark-image-filter);
 }
 
 .light-image {
-  filter: var(--light-image-filter);
+    filter: var(--light-image-filter);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--darker);
+    border-radius: 5px;
+}
+
+.drag-scroll-content {
+    padding: 0 10px;
 }
