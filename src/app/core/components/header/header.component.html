@@ -1,8 +1,11 @@
-<div class="app-header">
+<div class="app-header" [ngClass]="{'article': articleCode !== ''}">
     <button mat-icon-button>
-        <mat-icon class="material-icons-round help-btn">help</mat-icon>
+        <mat-icon class="material-icons-round help-btn">{{articleCode !== '' ? 'menu' : 'help'}}</mat-icon>
     </button>
-    <h1 class="name-page"><span class="name-page-highlight">m</span>etryki <span class="name-page-highlight">n</span>ie<span class="name-page-highlight">e</span>uklidesowe</h1>
+    <h1 class="name-page">
+        <span *ngIf="articleCode === ''"><span class="name-page-highlight">m</span>etryki <span class="name-page-highlight">n</span>ie<span class="name-page-highlight">e</span>uklidesowe</span>
+        <span *ngIf="articleCode !== '' && dataCards"><span [outerHTML]="getName() | colorfirstletter"></span></span>
+    </h1>
     <button mat-icon-button (click)="toggleDarkMode()" class="mode-btn">
         <mat-icon class="material-icons-round">{{isDarkMode ? 'dark_mode' : 'light_mode'}}</mat-icon>
     </button>

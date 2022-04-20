@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ThemeService } from './core/services/theme.service';
+import { Router, Event, NavigationStart, NavigationEnd, NavigationError } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -8,4 +8,17 @@ import { ThemeService } from './core/services/theme.service';
 })
 export class AppComponent {
   title = 'mnieeuklidesowe';
+  articleCode: string = '';
+
+  constructor(private router: Router) {
+    this.router.events.subscribe((event: Event) => {
+      if (event instanceof NavigationEnd) {
+        if (event.url.includes("/article")) {
+          this.articleCode = event.url.substring(9, event.url.length);
+        } else {
+          this.articleCode = '';
+        }
+      }
+    });
+  }
 }

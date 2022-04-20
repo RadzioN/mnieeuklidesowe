@@ -26,6 +26,19 @@
     transition: .5s;
 }
 
+.article {
+    align-items: center;
+}
+
+.article .name-page {
+    font-size: 30px;
+    padding-top: 0px;
+}
+
+.article .help-btn {
+    color: var(--inverse);
+}
+
 @media(max-width: 1000px) {
     .name-page {
         font-size: 40px;
@@ -46,7 +59,8 @@
         align-items: center;
     }
 
-    .name-page {
+    .name-page,
+    .article .name-page {
         font-size: 25px;
         padding-top: 0px;
     }

@@ -30,6 +30,7 @@ $app-light-theme: mat-light-theme($mat-primary-palette, $mat-accent-palette);
     --light-image-filter: invert(100%);
     --lighter: #9C9C9C;
     --darker: #D8D8D8;
+    --inverse: #000;
     background-color: #F1F1F1;
 }
 
@@ -41,6 +42,7 @@ $app-dark-theme: mat-dark-theme($mat-primary-palette, $mat-accent-palette);
     --dark-image-filter: invert(100%);
     --lighter: #9C9C9C;
     --darker: #101010;
+    --inverse: #fff;
     background-color: rgb(24, 24, 24);
     color: whitesmoke;
 }
