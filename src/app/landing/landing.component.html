@@ -1,5 +1,5 @@
 <drag-scroll>
-    <card></card>
-    <card></card>
-    <card></card>
+    <div *ngFor="let card of dataCards" style="height: auto;">
+        <card title="{{card.name}}" image="{{card.image}}" time="{{card.time}}" sections="{{card.sections}}" code="{{card.code}}"></card>
+    </div>
 </drag-scroll>

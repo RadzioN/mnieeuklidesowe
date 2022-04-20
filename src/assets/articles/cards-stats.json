@@ -1,0 +1,37 @@
+[
+    {
+        "code": "mmiasto",
+        "name": "metryka miasto",
+        "image": "/assets/images/cards/metryka-miasto.jpg",
+        "time": "20min.",
+        "sections": "3 sekcje"
+    },
+    {
+        "code": "mmaksimum",
+        "name": "metryka maksimum",
+        "image": "/assets/images/cards/metryka-maksimum.jpg",
+        "time": "1godz.",
+        "sections": "4 sekcje"
+    },
+    {
+        "code": "mkolejowa",
+        "name": "metryka kolejowa",
+        "image": "/assets/images/cards/metryka-kolejowa.jpg",
+        "time": "10min.",
+        "sections": "2 sekcje"
+    },
+    {
+        "code": "mrzeka",
+        "name": "metryka rzeka",
+        "image": "/assets/images/cards/metryka-rzeka.jpg",
+        "time": "35min.",
+        "sections": "5 sekcji"
+    },
+    {
+        "code": "mdyskretna",
+        "name": "metryka dyskretna",
+        "image": "/assets/images/cards/metryka-dyskretna.jpg",
+        "time": "50min.",
+        "sections": "4 sekcje"
+    }
+]

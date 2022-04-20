@@ -1,17 +1,17 @@
 <div class="card">
-    <img class="card-image" src="/assets/images/cards/metryka-maksimum.jpg">
+    <img class="card-image" src="{{image}}">
     <div class="card-flex">
         <h1 class="card-title">
-            <span class="card-title-highlight">m</span>etryka <span class="card-title-highlight">m</span>aksimum
+            <span [outerHTML]="title | colorfirstletter"></span>
         </h1>
         <div class="card-content">
             <div class="cont-stat">
-                <mat-icon class="material-icons-round">watch_later</mat-icon> 30min
+                <mat-icon class="material-icons-round">watch_later</mat-icon> {{time}}
             </div>
             <div class="cont-stat">
-                <mat-icon class="material-icons-round">text_fields</mat-icon> 4 artykuły
+                <mat-icon class="material-icons-round">text_fields</mat-icon> {{sections}}
             </div>
         </div>
-        <button routerLink="/article" mat-stroked-button class="card-action">Wybierz</button>
+        <button [routerLink]="['/article', code]" mat-stroked-button class="card-action">Wybierz</button>
     </div>
 </div>

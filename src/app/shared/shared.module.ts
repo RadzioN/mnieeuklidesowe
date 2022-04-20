@@ -7,6 +7,7 @@ import { RouterModule } from '@angular/router';
 //Import wszystkich składników Angular Material
 import { DemoMaterialModule } from './layout';
 import { CardComponent } from './components';
+import { ColorFirstLetter } from './pipes';
 
 @NgModule({
     imports: [
@@ -18,7 +19,8 @@ import { CardComponent } from './components';
         DemoMaterialModule,
     ],
     declarations: [
-        CardComponent
+        CardComponent,
+        ColorFirstLetter
     ],
     exports: [
         CommonModule,
@@ -27,7 +29,8 @@ import { CardComponent } from './components';
         HttpClientModule,
         RouterModule,
         DemoMaterialModule,
-        CardComponent
+        CardComponent,
+        ColorFirstLetter
     ]
 })
 export class SharedModule { }

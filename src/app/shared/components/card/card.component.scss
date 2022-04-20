@@ -1,13 +1,13 @@
 .card {
-    width: 300px;
-    height: 400px;
+    width: 400px;
+    height: 500px;
     background: var(--contrast);
     box-shadow: 0 0 15px var(--darker);
     border-radius: 5px;
     user-select: none;
     display: flex;
     flex-direction: column;
-    margin: 0 10px;
+    margin: 0 10px 20px;
 }
 
 .card-image {
@@ -31,14 +31,10 @@
 .card-title {
     font-family: Gugi;
     text-transform: uppercase;
-    font-size: 20px;
+    font-size: 30px;
     color: #00C7BB;
     margin: 0;
     padding-top: 10px;
-}
-
-.card-title-highlight {
-    color: #006660;
 }
 
 .card-content{
@@ -54,8 +50,32 @@
     gap: 5px;
     font-weight: bold;
     color: var(--lighter);
+    font-size: 18px;
 }
 
 .card-action {
     width: 100%;
+    font-weight: bold;
+}
+
+@media(max-height: 800px), (max-width: 450px) {
+    .card {
+        width: 300px;
+        height: 400px;
+    }
+
+    .card-title {
+        font-size: 20px;
+    }
+
+    .cont-stat {
+        font-size: 15px;
+    }
+}
+
+@media(max-height: 600px), (max-height: 550px) {
+    .card {
+        width: 250px;
+        height: 350px;
+    }
 }
