@@ -10,7 +10,8 @@ import {
 
 import {
   FooterComponent,
-  HeaderComponent
+  HeaderComponent,
+  MenuComponent
 } from './core';
 
 import { LandingModule } from './landing/landing.module';
@@ -21,6 +22,7 @@ import { ArticleModule } from './article/article.module';
     AppComponent,
     HeaderComponent,
     FooterComponent,
+    MenuComponent,
   ],
   imports: [
     BrowserModule,

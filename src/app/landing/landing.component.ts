@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
-import { HttpClient } from '@angular/common/http'; 
+import { CardService } from '../core';
 
 @Component({
   selector: 'app-landing',
@@ -12,16 +11,11 @@ export class LandingComponent implements OnInit {
   hideScrollbar: boolean = true;
   dataCards: any;
 
-  constructor(private http: HttpClient) { }
+  constructor(private cardService: CardService) { }
 
   ngOnInit() {
-    this.getJSON().subscribe(data => {
-      this.dataCards = data;
-    });
+    this.dataCards = this.cardService.getCardsData();
   }
 
-  public getJSON(): Observable<any> {
-    return this.http.get("./assets/articles/cards-stats.json");
-  }
 
 }

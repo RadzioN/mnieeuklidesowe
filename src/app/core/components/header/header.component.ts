@@ -1,7 +1,5 @@
-import { HttpClient } from '@angular/common/http';
-import { Component, Input } from '@angular/core';
-import { Observable } from 'rxjs';
-import { ThemeService } from '../../services';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { CardService, ThemeService } from '../../services';
 
 @Component({
     selector: 'app-header',
@@ -11,21 +9,17 @@ import { ThemeService } from '../../services';
 export class HeaderComponent {
     isDarkMode: boolean;
     @Input() articleCode: string = '';
-    dataCards: any;
+    @Output() openMenu = new EventEmitter();
+    nameCard!: string;
 
-    constructor(private themeService: ThemeService, private http: HttpClient) {
+    constructor(private cardService: CardService, private themeService: ThemeService) {
+        this.cardService.initCardsData();
         this.themeService.initTheme();
         this.isDarkMode = !this.themeService.isDarkMode();
     }
 
-    ngOnInit() {
-        this.getJSON().subscribe(data => {
-            this.dataCards = data;
-        });
-    }
-
-    public getJSON(): Observable<any> {
-        return this.http.get("./assets/articles/cards-stats.json");
+    ngOnChanges() {
+        this.nameCard = this.cardService.getCardsData()?.filter((m: { code: string; }) => m.code === this.articleCode)[0]?.name;
     }
 
     toggleDarkMode() {
@@ -34,9 +28,5 @@ export class HeaderComponent {
         this.isDarkMode
             ? this.themeService.update('light-mode')
             : this.themeService.update('dark-mode');
-    }
-
-    getName() {
-        return this.dataCards?.filter((m: { code: string; }) => m.code === this.articleCode)[0].name;
     }
 }

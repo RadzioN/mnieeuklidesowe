@@ -1,9 +1,10 @@
 <mat-drawer-container class="container" hasBackdrop="true">
-    <mat-drawer #drawer mode="over">I'm a drawer</mat-drawer>
+    <mat-drawer #drawer mode="over" (click)="drawer.toggle()" class="side-nav">
+        <app-menu [articleCode]="articleCode"></app-menu>
+    </mat-drawer>
     <mat-drawer-content>
-        <app-header [articleCode]="articleCode"></app-header>
+        <app-header [articleCode]="articleCode" (openMenu)="drawer.toggle()"></app-header>
         <router-outlet></router-outlet>
         <app-footer></app-footer>
-        <button mat-raised-button (click)="drawer.toggle()">Toggle drawer</button>
     </mat-drawer-content>
 </mat-drawer-container>

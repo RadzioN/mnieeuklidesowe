@@ -1,0 +1,10 @@
+<div class="app-menu">
+    <h1 class="logo-page">MNE</h1>
+    <hr>
+    <a matRipple routerLink="" class="menu-button"><mat-icon class="material-icons-round">home</mat-icon> Strona Główna</a>
+    <p class="menu-desc">Kursy</p>
+    <div *ngFor="let card of dataCards">
+        <a matRipple [routerLink]="['/article', card.code]" class="menu-button" [ngClass]="{'active': card.code === articleCode}"><span class="card-title"><span [outerHTML]="card.name | colorfirstletter"></span></span></a>
+    </div>
+
+</div>
