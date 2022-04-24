@@ -7,3 +7,8 @@
 .side-nav {
     background: var(--contrast);
 }
+
+mat-drawer-content {
+    display: flex;
+    flex-direction: column;
+}
