@@ -8,6 +8,7 @@ import { RouterModule } from '@angular/router';
 import { DemoMaterialModule } from './layout';
 import { CardComponent } from './components';
 import { ColorFirstLetter } from './pipes';
+import { HelpComponent } from './components/help';
 
 @NgModule({
     imports: [
@@ -20,6 +21,7 @@ import { ColorFirstLetter } from './pipes';
     ],
     declarations: [
         CardComponent,
+        HelpComponent,
         ColorFirstLetter
     ],
     exports: [
@@ -29,6 +31,7 @@ import { ColorFirstLetter } from './pipes';
         HttpClientModule,
         RouterModule,
         DemoMaterialModule,
+        HelpComponent,
         CardComponent,
         ColorFirstLetter
     ]

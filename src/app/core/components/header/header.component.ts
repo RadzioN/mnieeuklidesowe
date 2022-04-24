@@ -1,4 +1,6 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { HelpComponent } from 'src/app/shared';
 import { CardService, ThemeService } from '../../services';
 
 @Component({
@@ -12,7 +14,7 @@ export class HeaderComponent {
     @Output() openMenu = new EventEmitter();
     nameCard!: string;
 
-    constructor(private cardService: CardService, private themeService: ThemeService) {
+    constructor(private cardService: CardService, private themeService: ThemeService, public dialog: MatDialog) {
         this.cardService.initCardsData();
         this.themeService.initTheme();
         this.isDarkMode = !this.themeService.isDarkMode();
@@ -28,5 +30,13 @@ export class HeaderComponent {
         this.isDarkMode
             ? this.themeService.update('light-mode')
             : this.themeService.update('dark-mode');
+    }
+
+    openHelpDialog() {
+        const dialogRef = this.dialog.open(HelpComponent);
+
+        dialogRef.afterClosed().subscribe(result => {
+            console.log(`Dialog result: ${result}`);
+        });
     }
 }

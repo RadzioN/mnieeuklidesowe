@@ -1,5 +1,5 @@
 <div class="app-header" [ngClass]="{'article': articleCode !== ''}">
-    <button mat-icon-button (click)="articleCode !== '' ? openMenu.emit() : null">
+    <button mat-icon-button (click)="articleCode !== '' ? openMenu.emit() : openHelpDialog()">
         <mat-icon class="material-icons-round help-btn">{{articleCode !== '' ? 'menu' : 'help'}}</mat-icon>
     </button>
     <h1 class="name-page">

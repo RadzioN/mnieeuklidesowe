@@ -17,5 +17,4 @@ export class LandingComponent implements OnInit {
     this.dataCards = this.cardService.getCardsData();
   }
 
-
 }
