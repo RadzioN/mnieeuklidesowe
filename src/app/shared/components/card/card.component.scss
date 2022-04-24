@@ -73,9 +73,24 @@
     }
 }
 
-@media(max-height: 600px), (max-height: 550px) {
+@media(max-height: 600px), (max-width: 350px) {
     .card {
         width: 250px;
         height: 350px;
+    }
+}
+
+@media(orientation: landscape) and (max-height: 500px) {
+    .card {
+        width: 250px;
+        height: 200px;
+    }
+
+    .card-image {
+        display: none;
+    }
+
+    .card-flex {
+        height: 100%;
     }
 }
