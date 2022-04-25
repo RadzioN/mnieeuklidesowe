@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CardService } from '../core';
+import { Card } from '../shared';
 
 @Component({
   selector: 'app-landing',
@@ -9,7 +10,7 @@ import { CardService } from '../core';
 export class LandingComponent implements OnInit {
 
   hideScrollbar: boolean = true;
-  dataCards: any;
+  dataCards!: Card[];
 
   constructor(private cardService: CardService) { }
 
