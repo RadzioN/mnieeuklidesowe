@@ -1,10 +1,14 @@
 import { Component } from '@angular/core';
-import { Router, Event, NavigationEnd } from '@angular/router';
+import { Router, Event, NavigationEnd, RouterOutlet } from '@angular/router';
+import { fader } from './shared/layout';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  animations: [
+    fader,
+  ]
 })
 export class AppComponent {
   title = 'mnieeuklidesowe';
@@ -20,5 +24,9 @@ export class AppComponent {
         }
       }
     });
+  }
+
+  prepareRoute(outlet: RouterOutlet) {
+    return outlet.activatedRouteData['depth'];
   }
 }

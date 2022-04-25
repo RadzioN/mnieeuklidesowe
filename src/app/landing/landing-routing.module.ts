@@ -6,6 +6,7 @@ const routes: Routes = [
     {
         path: '',
         component: LandingComponent,
+        data: { depth: 1 }
     }
 ];
 

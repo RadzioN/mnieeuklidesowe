@@ -6,6 +6,7 @@ const routes: Routes = [
     {
         path: ':articlecode',
         component: ArticleComponent,
+        data: { depth: 2 }
     }
 ];
 
