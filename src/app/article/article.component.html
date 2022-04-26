@@ -1,19 +1,17 @@
-<div class="article-page">
+<div class="article-page" *ngFor="let article of articleData">
     <div class="side-short">
-        <div class="short active" matRipple>
-            <img src="/assets/images/cards/metryka-miasto.jpg" class="short-image">
-            <h1 class="short-title">Historia</h1>
-        </div>
-        <div class="short" matRipple>
-            <img src="/assets/images/cards/metryka-miasto.jpg" class="short-image">
-            <h1 class="short-title">Historia</h1>
-        </div>
-        <div class="short" matRipple>
-            <img src="/assets/images/cards/metryka-miasto.jpg" class="short-image">
-            <h1 class="short-title">Historia</h1>
+        <div class="short active" matRipple *ngFor="let section of article.sections">
+            <img src="{{section.image}}" class="short-image">
+            <h1 class="short-title">{{section.section}}</h1>
         </div>
     </div>
     <div class="article-content">
-        ds
+        <div class="section" *ngFor="let section of article.sections">
+            <h1>{{section.section}}</h1>
+            <div class="subsection" *ngFor="let subsection of section.subsections">
+                <h3>{{subsection.subsection}}</h3>
+                <p>{{subsection.text}}</p>
+            </div>
+        </div>
     </div>
 </div>

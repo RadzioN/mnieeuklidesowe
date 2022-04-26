@@ -1,0 +1,64 @@
+[
+    {"sections": [
+        {
+            "section": "historia",
+            "image" : "/assets/images/cards/metryka-miasto.jpg",
+            "subsections": [
+                {
+                    "subsection": "Twórca",
+                    "text": "Jan Kowalski (1950–2000) – polski pisarz, poeta i muzyk",
+                    "image": [
+                        {
+                            "path": "/assets/images/cards/metryka-miasto.jpg",
+                            "class": "author-photo"
+                        }
+                    ]
+                },
+                {
+                    "subsection": "Rozwój",
+                    "text": "Zwierzętom przeznaczał większość swoich tantiem, ponieważ od dziecka miał swoją ulubioną świnkę morską, o której napisał też większość swoich utworów. Była ona też inspiracją do opery i mniejszych form muzycznych."
+                }
+            ]
+        },
+        {
+            "section": "teoria",
+            "image" : "/assets/images/cards/metryka-maksimum.jpg",
+            "subsections": [
+                {
+                    "subsection": "Wzór",
+                    "text": "Jan Kowalski (1950–2000) – polski pisarz, poeta i muzyk",
+                    "image": [
+                        {
+                            "path": "/assets/images/cards/metryka-miasto.jpg",
+                            "class": "full-image"
+                        }
+                    ]
+                },
+                {
+                    "subsection": "Przypis",
+                    "text": "Zwierzętom przeznaczał większość swoich tantiem, ponieważ od dziecka miał swoją ulubioną świnkę morską, o której napisał też większość swoich utworów. Była ona też inspiracją do opery i mniejszych form muzycznych."
+                }
+            ]
+        },
+        {
+            "section": "praktyka",
+            "image" : "/assets/images/cards/metryka-miasto.jpg",
+            "subsections": [
+                {
+                    "subsection": "Zastosowanie",
+                    "text": "Jan Kowalski (1950–2000) – polski pisarz, poeta i muzyk",
+                    "image": [
+                        {
+                            "path": "/assets/images/cards/metryka-miasto.jpg",
+                            "class": "around-image"
+                        }
+                    ]
+                },
+                {
+                    "subsection": "Przykład z życia",
+                    "text": "Zwierzętom przeznaczał większość swoich tantiem, ponieważ od dziecka miał swoją ulubioną świnkę morską, o której napisał też większość swoich utworów. Była ona też inspiracją do opery i mniejszych form muzycznych."
+                }
+            ]
+        }
+    ]}
+]
